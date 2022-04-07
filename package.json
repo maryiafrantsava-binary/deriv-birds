@@ -1,0 +1,34 @@
+{
+  "name": "deriv-birds",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "../../Deriv-birds/node_modules/.bin/nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "../../Deriv-birds/node_modules/.bin/concurrently \\\"npm run server\\\" \\\"npm run client\\\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryiafrantsava-deriv/Deriv-birds.git"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "team 'Deriv birds'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maryiafrantsava-deriv/Deriv-birds/issues"
+  },
+  "homepage": "https://github.com/maryiafrantsava-deriv/Deriv-birds#readme",
+  "dependencies": {
+    "mongoose": "^6.2.10",
+    "xpress": "^2.4.6"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}
