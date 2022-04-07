@@ -5,13 +5,13 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "../../Deriv-birds/node_modules/.bin/nodemon app.js",
+    "server": "nodemon app.js",
     "client": "npm run start --prefix client",
-    "dev": "../../Deriv-birds/node_modules/.bin/concurrently \\\"npm run server\\\" \\\"npm run client\\\""
+    "dev": "concurrently \\\"npm run server\\\" \\\"npm run client\\\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maryiafrantsava-deriv/Deriv-birds.git"
+    "url": "git+https://github.com/maryiafrantsava-binary/Deriv-birds.git"
   },
   "keywords": [
     "mern",
@@ -20,9 +20,9 @@
   "author": "team 'Deriv birds'",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maryiafrantsava-deriv/Deriv-birds/issues"
+    "url": "https://github.com/maryiafrantsava-binary/deriv-birds/issues"
   },
-  "homepage": "https://github.com/maryiafrantsava-deriv/Deriv-birds#readme",
+  "homepage": "https://github.com/maryiafrantsava-binary/deriv-birds#readme",
   "dependencies": {
     "mongoose": "^6.2.10",
     "xpress": "^2.4.6"
