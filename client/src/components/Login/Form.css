@@ -1,0 +1,46 @@
+.login_wrapper {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login_form{
+    height: 442px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.login_form .title {
+    text-align: center;
+}
+
+.input_label {
+    font-weight: bold;
+}
+
+.input_field {
+    width: 364px;
+    font-size: 16px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #C4C4C4
+ }
+
+.submit_button {
+    width: 364px;
+    height: 44px;
+    margin-top: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background-color: #F44C5C; 
+    cursor: pointer;
+}
+
+.error{
+    color:#F44C5C;
+    border-color: #F44C5C;;
+}
