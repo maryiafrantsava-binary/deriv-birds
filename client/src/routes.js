@@ -1,29 +1,42 @@
 import React from 'react';
-import {Routes, Route, Navigate} from "react-router-dom";
-import {LinksPage} from "./pages/LinksPage";
-import {CreatePage} from "./pages/CreatePage";
-import {DetailPage} from "./pages/DetailPage";
+import {Switch, Route, Redirect} from 'react-router-dom'
+import {GamesPage} from "./pages/GamesPage";
+import {HomePage} from "./pages/HomePage";
+import {HistoryPage} from "./pages/HistoryPage";
 import {AuthPage} from "./pages/AuthPage";
+import {AboutUsPage} from "./pages/AboutUsPage";
+import {LeaderboardPage} from "./pages/LeaderboardPage";
 
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated) {
         return (
-            <Routes>
-                {/*<>*/}
-                    <Route exact path="/links" element={<LinksPage/>}/>
-                    <Route exact path="/create" element={<CreatePage/>}/>
-                    <Route path="/detail/:id" element={<DetailPage/>}/>
-                {/*</>*/}
-                {/*:*/}
-                {/*<Navigate to="/create"/>*/}
-            </Routes>
+            <Switch>
+                <Route path="/home" exact>
+                    <HomePage />
+                </Route>
+                <Route path="/game/:id" exact>
+                    <GamesPage />
+                </Route>
+                <Route path="/history">
+                    <HistoryPage />
+                </Route>
+                <Route path="/about_us">
+                    <AboutUsPage />
+                </Route>
+                <Route path="/leaderboard">
+                    <LeaderboardPage />
+                </Route>
+                <Redirect to="/home" />
+            </Switch>
         )
     }
 
     return (
-        <Routes>
-            <Route exact path="/" element={<AuthPage/>}/>
-            {/*<Navigate to="/"/>*/}
-        </Routes>
+        <Switch>
+            <Route path="/" exact>
+                <AuthPage />
+            </Route>
+            <Redirect to="/" />
+        </Switch>
     )
 }

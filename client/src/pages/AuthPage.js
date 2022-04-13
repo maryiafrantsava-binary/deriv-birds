@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {useHttp} from '../hooks/http.hook';
 import {useMessage} from '../hooks/message.hook';
 import {AuthContext} from '../context/Auth.context';
+import {useHistory} from "react-router-dom";
 
 export const AuthPage = () => {
     const auth = useContext(AuthContext);
@@ -34,14 +35,7 @@ export const AuthPage = () => {
     return (
         <div className="row">
             <div className="col s6 offset-s3">
-                <h1>Auth Page</h1>
-                {/*<input*/}
-                {/*    placeholder="placeholder"*/}
-                {/*    id="name"*/}
-                {/*    type="text"*/}
-                {/*    className="validate"*/}
-                {/*/>*/}
-                {/*<label>name</label>*/}
+                <h1>Registratuon</h1>
                 <input
                     placeholder="placeholder1"
                     id="email"
