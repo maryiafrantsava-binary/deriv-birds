@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from "react";
 import {useHttp} from '../hooks/http.hook';
 import {useMessage} from '../hooks/message.hook';
 import {AuthContext} from '../context/Auth.context';
-import {useHistory} from "react-router-dom";
 
 export const AuthPage = () => {
     const auth = useContext(AuthContext);
@@ -29,13 +28,12 @@ export const AuthPage = () => {
         try {
             const data = await request('/api/auth/login', 'POST', {...form})
             auth.login(data.token, data.userId);
-            // message(data.message);
         } catch (e) {}
     }
     return (
         <div className="row">
             <div className="col s6 offset-s3">
-                <h1>Registratuon</h1>
+                <h1>Registration</h1>
                 <input
                     placeholder="placeholder1"
                     id="email"

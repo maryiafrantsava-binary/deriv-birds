@@ -26,6 +26,7 @@ export const useRoutes = isAuthenticated => {
                 <Route path="/leaderboard">
                     <LeaderboardPage />
                 </Route>
+                
                 <Redirect to="/home" />
             </Switch>
         )
