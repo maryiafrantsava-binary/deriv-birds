@@ -1,0 +1,23 @@
+.bflyer{
+  background-image: url(../../public/images/background_game.png);
+  background-size: cover;
+  width: 80vw;
+  height: 100vh;
+}
+
+.bflyer_container{
+  display: flex;
+  justify-content: space-around;
+  filter: drop-shadow(13px 48px 20px rgba(0, 0, 0, 0.01))
+          drop-shadow(7px 27px 17px rgba(0, 0, 0, 0.05))
+          drop-shadow(3px 12px 12px rgba(0, 0, 0, 0.09))
+          drop-shadow(1px 3px 7px rgba(0, 0, 0, 0.1))
+          drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+
+  .settings_block{
+    width: 45rem;
+    height: 30rem;
+    background: #FFFFFF;
+    border-radius: 2rem;
+  }
+}

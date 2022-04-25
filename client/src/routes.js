@@ -1,6 +1,7 @@
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom'
 import {GamesPage} from "./pages/GamesPage";
+import {BFlyerPage} from "./pages/BFlyerPage";
 import {HomePage} from "./pages/HomePage";
 import {HistoryPage} from "./pages/HistoryPage";
 import {AuthPage} from "./pages/AuthPage";
@@ -16,6 +17,9 @@ export const useRoutes = isAuthenticated => {
                 </Route>
                 <Route path="/game/:id" exact>
                     <GamesPage />
+                </Route>
+                <Route path="/game">
+                    <BFlyerPage/>
                 </Route>
                 <Route path="/history">
                     <HistoryPage />
