@@ -4,13 +4,15 @@ import {useMessage} from '../hooks/message.hook';
 import {AuthContext} from '../context/Auth.context';
 import BirdOne from '../assets/images/birds_success2.svg';
 import BirdTwo from '../assets/images/bird_success1.svg';
-import './Auth.css'
+import './Auth.css';
+
 export const AuthPage = () => {
+   // const config = require('config');
     const auth = useContext(AuthContext);
     const message = useMessage();
     const {loading, error, request, clearError} = useHttp();
     const [form, setForm] = useState({
-        email: '', password: ''
+        username:'',email: '', password: ''
     });
     const [isLogin, setisIsLogin] = useState(true);
     useEffect(() => {
@@ -29,14 +31,14 @@ export const AuthPage = () => {
     
     const registerHandler = async () => {
         try {
-            const data = await request('/api/auth/register', 'POST', {...form})
+            const data = await request(`https://deriv-birds.herokuapp.com/api/auth/register`, 'POST', {...form})
             message(data.message);
             setisIsLogin(true);
         } catch (e) {}
     }
     const loginHandler = async () => {
         try {
-            const data = await request('/api/auth/login', 'POST', {...form})
+            const data = await request(`https://deriv-birds.herokuapp.com/api/auth/login`, 'POST', {...form})
             auth.login(data.token, data.userId);
         } catch (e) {}
     }

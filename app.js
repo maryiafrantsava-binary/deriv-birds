@@ -1,12 +1,16 @@
 const express = require('express');
 const config = require('config');
 const mongoose = require('mongoose');
+var cors = require('cors')
 
 const app = express();
-
+app.use(cors())
 app.use(express.json({extended: true}))
 
+
+
 app.use('/api/auth', require('./routes/auth.routes'));
+app.use('/api/history', require('./routes/history.routes'));
 
 const PORT = config.get('port') || 8000;
 
@@ -16,7 +20,7 @@ async function start(){
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        app.listen(PORT, () => console.log(`app has been started ${PORT}...`));
+        app.listen(process.env.PORT || PORT, () => console.log(`app has been started ${PORT}...`));
     }catch(e){
         console.log('Server Error', e.message);
         process.exit(1)
