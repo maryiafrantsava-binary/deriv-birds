@@ -2,6 +2,8 @@ import React, {useContext, useEffect, useState} from "react";
 import {useHttp} from '../hooks/http.hook';
 import {useMessage} from '../hooks/message.hook';
 import {AuthContext} from '../context/Auth.context';
+import BirdOne from '../assets/images/birds_success2.svg';
+import BirdTwo from '../assets/images/bird_success1.svg';
 import './Auth.css'
 export const AuthPage = () => {
     const auth = useContext(AuthContext);
@@ -38,15 +40,16 @@ export const AuthPage = () => {
             auth.login(data.token, data.userId);
         } catch (e) {}
     }
-    return (<>
-        <div className="row login-container" id="loginform">
+    return (<div className="auth-wrapper">
+       <img className="bird-1" src={BirdOne} alt="bird-1"/>    
+        <div className="row login-container" id="loginform">       
             {
                 isLogin ? <>
                     <h2 id="headerTitle">Login</h2>
-                    <div class="row">
-                        <label htmlFor="email">User name</label>
+                    <div className="row">
+                        <label htmlFor="email">Username or Email</label>
                         <input
-                            placeholder="placeholder1"
+                            placeholder="Username/Email"
                             id="email"
                             type="text"
                             name="email"
@@ -55,10 +58,10 @@ export const AuthPage = () => {
                             onChange={changeHandler}
                         />
                     </div>
-                    <div class="row">
-                        <label htmlFor="password">password</label>
+                    <div className="row">
+                        <label htmlFor="password">Password</label>
                         <input
-                            placeholder="placeholder2"
+                            placeholder="password"
                             id="password"
                             type="password"
                             name="password"
@@ -70,16 +73,14 @@ export const AuthPage = () => {
                     <button className="login-button"
                         onClick={loginHandler}
                         disabled={loading}
-                    >login</button>
-
-
+                    >Log In</button>
                 </> :
                     <>
                         <h2 id="headerTitle">Sign Up</h2>
-                        <div class="row">
-                            <label htmlFor="username">User Name</label>
+                        <div className="row">
+                            <label htmlFor="username">Username</label>
                             <input
-                                placeholder="placeholder1"
+                                placeholder="username"
                                 id="username"
                                 type="text"
                                 name="username"
@@ -88,10 +89,10 @@ export const AuthPage = () => {
                                 onChange={changeHandler}
                             />
                         </div>
-                        <div class="row">
-                            <label htmlFor="email">Email Id:</label>
+                        <div className="row">
+                            <label htmlFor="email">Email</label>
                             <input
-                                placeholder="placeholder1"
+                                placeholder="email"
                                 id="email"
                                 type="text"
                                 name="email"
@@ -100,7 +101,7 @@ export const AuthPage = () => {
                                 onChange={changeHandler}
                             />
                         </div>
-                        <div class="row">
+                        <div className="row">
                             <label htmlFor="password">Password</label>
                             <input
                                 placeholder="placeholder2"
@@ -119,25 +120,28 @@ export const AuthPage = () => {
                             disabled={loading}
                         >Sign up</button>
                     </>
-
-
+            }
+            {isLogin ? 
+                <div className="back-block">
+                    <span>Not registered yet?</span>
+                    <button 
+                        onClick={signinHandler}
+                        disabled={loading}
+                    >
+                        Register</button>
+                </div> : 
+                <div className="back-block">
+                    <span>Already have any account?</span>
+                    <button
+                        onClick={backtoLogin}
+                        disabled={loading}
+                    >
+                       Log In</button>
+                </div>   
 
             }
-            {isLogin ? <>
-                <span>Not registered yet?</span>
-                <button
-                    onClick={signinHandler}
-                    disabled={loading}
-                >Register</button>
-            </> : <button className="back-login"
-                onClick={backtoLogin}
-                disabled={loading}
-            >Back to login</button>}
-
         </div>
-    </>
-
-
-        
+        <img className="bird-2" src={BirdTwo} alt="bird-2"/>
+    </div> 
     )
 }
