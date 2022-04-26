@@ -30,6 +30,8 @@
     "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.10",
+    "node-sass": "^7.0.1",
+    "sass": "^1.51.0",
     "xpress": "^2.4.6"
   },
   "devDependencies": {

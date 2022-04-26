@@ -123,7 +123,7 @@ export const AuthPage = () => {
             }
             {isLogin ? 
                 <div className="back-block">
-                    <span>Not registered yet?</span>
+                    <span>Not registered yet? </span>
                     <button 
                         onClick={signinHandler}
                         disabled={loading}
@@ -131,7 +131,7 @@ export const AuthPage = () => {
                         Register</button>
                 </div> : 
                 <div className="back-block">
-                    <span>Already have any account?</span>
+                    <span>Already have any account? </span>
                     <button
                         onClick={backtoLogin}
                         disabled={loading}
