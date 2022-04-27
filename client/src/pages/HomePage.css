@@ -1,0 +1,50 @@
+.main {
+    background-image: url(../assets/images/main_bg.svg);
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    padding: 78px 215px 128px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.score-container {
+    background-image: url(../assets/images/game.svg);
+    background-size: contain;
+    width: 489px;
+    height: 330px;
+    background-color: #FFF;
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.game-button {
+    width: 130px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: #F44C5C;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+.game-button:focus , .game-button:hover {
+    background-color: #f44c5daf;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
