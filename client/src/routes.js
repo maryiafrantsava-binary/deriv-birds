@@ -6,7 +6,8 @@ import {HomePage} from "./pages/HomePage";
 import {HistoryPage} from "./pages/HistoryPage";
 import {AuthPage} from "./pages/AuthPage";
 import {AboutUsPage} from "./pages/AboutUsPage";
-import {LeaderboardPage} from "./pages/LeaderboardPage";
+
+import Leaderboard from './pages/Leaderboard';
 
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated) {
@@ -28,7 +29,7 @@ export const useRoutes = isAuthenticated => {
                     <AboutUsPage />
                 </Route>
                 <Route path="/leaderboard">
-                    <LeaderboardPage />
+                    <Leaderboard />
                 </Route>
                 
                 <Redirect to="/home" />
