@@ -2,5 +2,5 @@
   "port": 8000,
   "jwtSecret": "mariyaf mern",
   "mongoUri": "mongodb+srv://mariyaf:9F9HY69NiT2DNgDb@cluster0.qwc0e.mongodb.net/app?retryWrites=true&w=majority",
-  "baseUrl":"https://deriv-birds.herokuapp.com/"
+  "baseUrl": "https://deriv-birds.herokuapp.com/"
 }
