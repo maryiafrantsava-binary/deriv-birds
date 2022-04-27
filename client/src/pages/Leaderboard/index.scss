@@ -1,0 +1,123 @@
+.leaderboard {
+  h2 {
+    font-size: 4rem;
+    font-weight: 500px;
+    margin: 3rem 0;
+  }
+  &__list {
+    &-header {
+      padding: 1rem 3rem;
+      div {
+        p {
+          padding: 2rem;
+          font-weight: 500;
+          @extend .text-16;
+        }
+      }
+      display: flex;
+      align-items: center;
+      &-player {
+        width: 10%;
+      }
+      &-empty {
+        width: 20%;
+      }
+      &-coin {
+        width: 15%;
+        text-align: center;
+      }
+      &-skills {
+        width: 15%;
+        text-align: center;
+      }
+      &-achievements {
+        width: 40%;
+      }
+    }
+
+    &-item {
+      box-shadow: 0 0px 16px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      &.active {
+        // add background image later
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-avatar {
+        width: 10%;
+        .avatar-wrapper {
+          height: 60px;
+          width: 60px;
+          border-radius: 30px;
+          overflow: hidden;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      &-label {
+        width: 20%;
+        P {
+          @extend .text-14;
+        }
+      }
+      &-coins {
+        text-align: center;
+        width: 15%;
+        P {
+          @extend .text-14;
+        }
+      }
+      &-skills {
+        text-align: center;
+        width: 15%;
+        P {
+          @extend .text-14;
+        }
+        color: #a83838;
+      }
+      &-achievements {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.achievements {
+  display: flex;
+  align-items: end;
+  &__item {
+    height: 50px;
+    width: 50px;
+        margin: 0 3rem 0 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+
+.text-14 {
+  font-size: 14px;
+  margin: 0;
+  line-height: 17px;
+}
+
+.text-16 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 19px;
+}

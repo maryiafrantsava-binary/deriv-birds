@@ -25,6 +25,7 @@
   "homepage": "https://github.com/maryiafrantsava-binary/deriv-birds#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "classnames": "^2.3.1",
     "config": "^3.3.7",
     "cors": "^2.8.5",
     "express": "^4.17.3",
