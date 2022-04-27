@@ -1,13 +1,14 @@
 import React from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom'
-import {GamesPage} from "./pages/GamesPage";
-import {BFlyerPage} from "./pages/BFlyerPage";
-import {HomePage} from "./pages/HomePage";
-import {HistoryPage} from "./pages/HistoryPage";
-import {AuthPage} from "./pages/AuthPage";
-import {AboutUsPage} from "./pages/AboutUsPage";
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { GamesPage } from "./pages/GamesPage";
+import { BFlyerPage } from "./pages/BFlyerPage";
+import { HomePage } from "./pages/HomePage";
+import { HistoryPage } from "./pages/HistoryPage";
+import { AuthPage } from "./pages/AuthPage";
+import { AboutUsPage } from "./pages/AboutUsPage";
 
 import Leaderboard from './pages/Leaderboard';
+import Profile from './pages/Profile';
 
 export const useRoutes = isAuthenticated => {
     if (isAuthenticated) {
@@ -20,7 +21,7 @@ export const useRoutes = isAuthenticated => {
                     <GamesPage />
                 </Route>
                 <Route path="/game">
-                    <BFlyerPage/>
+                    <BFlyerPage />
                 </Route>
                 <Route path="/history">
                     <HistoryPage />
@@ -31,7 +32,10 @@ export const useRoutes = isAuthenticated => {
                 <Route path="/leaderboard">
                     <Leaderboard />
                 </Route>
-                
+                <Route path="/profile">
+                    <Profile />
+                </Route>
+
                 <Redirect to="/home" />
             </Switch>
         )

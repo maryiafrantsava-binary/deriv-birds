@@ -1,57 +1,64 @@
-.bflyer{
-  background-image: url(../../public/images/background_game.png);
-  background-size: cover;
-  width: 70vw;
-  height: 100vh;
+.bflyer {
+	background-image: url(../../public/images/background_game.svg);
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	padding: 5rem 0rem;
 }
 
-.bflyer_container{
-  display: flex;
-  justify-content: space-evenly;
-  filter: drop-shadow(13px 48px 20px rgba(0, 0, 0, 0.01))
-          drop-shadow(7px 27px 17px rgba(0, 0, 0, 0.05))
-          drop-shadow(3px 12px 12px rgba(0, 0, 0, 0.09))
-          drop-shadow(1px 3px 7px rgba(0, 0, 0, 0.1))
-          drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
-  .game{
-    width: 40%;
-  }
+.bflyer-common{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 
+	&_container{
+		display: flex;
+		justify-content: space-evenly;
+		filter: drop-shadow(13px 48px 20px rgba(0, 0, 0, 0.01))
+				drop-shadow(7px 27px 17px rgba(0, 0, 0, 0.05))
+				drop-shadow(3px 12px 12px rgba(0, 0, 0, 0.09))
+				drop-shadow(1px 3px 7px rgba(0, 0, 0, 0.1))
+				drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+		.game {
+			width: 40%;
+	}
+}
 
-  .frame{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    min-width: 300px;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 2rem;
-    margin: 1rem;
-    padding: 1rem;
+  .frame {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	min-width: 50rem;
+	align-items: center;
+	background: #FFFFFF;
+	border-radius: 2rem;
+	margin: 1rem;
+	padding: 1rem;
   }
-  img{
-    width: 80px;
-    height: 80px;
-  }
-  .settings_block{
-    width: 40%;
-    button{
-      width: 60%;
-      height: 44px;
-      font-size: 1.3rem;
-      font-weight: 700;
-      border: 0px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: opacity 0.25s ease-out;
-    }
-    .button-reach{
-      color: #000000;
-      background: #BDF7D8;
-    }
-    .button-not-reach{
-      color: #ffffff;
-      background: #F44C5C;
-    }
+	img {
+		width: 80px;
+		height: 80px;
+	}
+	.settings_block {
+		width: 30%;
+
+		button {
+			width: 60%;
+			height: 44px;
+			font-size: 1.3rem;
+			font-weight: 700;
+			border: 0px;
+			cursor: pointer;
+			border-radius: 8px;
+			transition: opacity 0.25s ease-out;
+		}
+		.button-reach{
+			color: #000000;
+			background: #BDF7D8;
+		}
+		.button-not-reach{
+			color: #ffffff;
+			background: #F44C5C;
+		}
   }
 }

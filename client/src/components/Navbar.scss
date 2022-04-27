@@ -1,4 +1,18 @@
 .nav-wrapper {
-  background: #F0EEEE;
-  box-shadow: none;
+    background: #F0EEEE;
+    box-shadow: none;
+
+    &-common {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .logo {
+        max-height: 8.3rem;
+    }
 }
+
