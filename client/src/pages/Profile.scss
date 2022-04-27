@@ -1,0 +1,104 @@
+.profile {
+    background-image: url(../assets/images/profile-bg.svg);
+    background-size: cover;
+    height: 100vh;
+    min-width: 90vw;
+    h1 {
+        margin: 60px 0 40px;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    &__avatar {
+        width: 162px;
+        height: 162px;
+        background-color: #C4C4C4;
+        border-radius: 100%;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    &__avatar-col {
+        margin-right: 60px;
+    }
+    &__profile-col {
+        margin-right: 190px;
+        width: 500px;
+    }
+}
+
+.input_wrapper {
+    display: flex;
+    justify-content: space-between;
+    input {
+        width: 204px;
+        height: 39px;
+        background-color: #fff;
+        border-radius: 8px;
+        filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+        border: none;
+    }
+    label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 15px;
+    }
+}
+
+.dashboard {
+    height: 95px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #f1f1f1;
+    border-radius: 20px;
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    padding: 18px 90px 18px 20px;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+
+    &__percent {
+        font-size: 30px;
+        color: #F44C5C;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+    }
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 42px;
+}
+
+.achievements {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    div {
+        text-align: center;
+        max-width: 140px;
+    }
+    &__text-wrapper {
+        height: 70px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    span {
+        font-size: 16px;
+        color: #828282;
+    }
+    p {
+        width: 140px;
+        font-size: 14px;
+        color: #828282;
+        margin-top: 5px;
+    }
+}
