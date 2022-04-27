@@ -1,14 +1,32 @@
 @import './colors.scss';
 
 h1 {
-  color: $primary-color;
-  display: flex;
-  justify-content: center;
+	font-size: 36px;
+    font-weight: bold;
+    color: $primary-color;
+    display: flex;
+    justify-content: center;
 }
 a {
-  text-decoration: none;
-  color: $primary-color !important;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.6rem !important;
+	text-decoration: none;
+	color: $primary-color !important;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.6rem !important;
+}
+
+select {
+	display: flex;
+	width: 108px;
+	height: 33px;
+	left: 65px;
+	top: 70px;
+	padding: 0.5rem;
+	background: #F0EEEE;
+	border-radius: 8px;
+}
+
+nav {
+	height: 8.3rem !important;
+	line-height: 8.3rem !important;
 }

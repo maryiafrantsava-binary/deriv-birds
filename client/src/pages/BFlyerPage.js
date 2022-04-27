@@ -66,32 +66,41 @@ React.useEffect(() => {
 
     return (
         <div className={"bflyer"}>
-            <h1>BFlyer</h1>
-            <div className={"bflyer_container"}>
-            <div className={"game frame"}>Game</div>
-                <div className="settings_block">
-                    <div className="frame">
-                        <div>
-                            <label htmlFor="duration"></label>
-                            <select id="duration" name="duration">
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                            </select>
+            <div className={"bflyer-common"}>
+                <h2>BFlyer</h2>
+                <div className={"bflyer-common_container"}>
+                    <div className={"game frame"}>Game</div>
+
+                    <div className="settings_block">
+                        <div className="frame">
+                            <div>
+                                <label htmlFor="duration">Qwe: </label>
+                                <select 
+                                    id="duration" 
+                                    name="duration"
+                                    defaultValue={5}>
+                                    <option value="5">5</option>
+                                    <option value="10" disabled>10</option>
+                                    <option value="15" disabled>15</option>
+                                </select>
+                            </div>
                         </div>
+                        <div className="frame">
+                            <img src={BirdReach} alt="bird-reach"/>
+                            <button className="button-reach">Purchase</button>
+                        </div>
+                        <div className="frame">
+                            <img src={BirdNotReach} alt="bird-not-reach"/>
+                            <button className="button-not-reach">Purchase</button>
+                        </div>
+                        <div className="game_container frame"></div>
+                        <div>
+                            {/* <Ticks/> */} 
+                            block 2
+                        </div>
+
                     </div>
-                    <div className="frame">
-                        <img src={BirdReach} alt="bird-reach"/>
-                        <button className="button-reach">Purchase</button>
-                    </div>
-                    <div className="frame">
-                        <img src={BirdNotReach} alt="bird-not-reach"/>
-                        <button className="button-not-reach">Purchase</button>
-                    </div>
-                    <div className="game_container frame">
-                </div>
-                    <Ticks/>
-block 2
+
                 </div>
             </div>
         </div>
