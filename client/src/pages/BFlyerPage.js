@@ -1,5 +1,8 @@
 import React from "react";
-import './BFlyerPage.scss';
+import './BFlyerPage.scss'
+import Ticks from '../components/Ticks';
+import BirdReach from '../assets/images/bird_reach.svg'
+import BirdNotReach from '../assets/images/bird_not_reach.svg'
 
 export const BFlyerPage = () => {
 
@@ -65,11 +68,29 @@ React.useEffect(() => {
         <div className={"bflyer"}>
             <h1>BFlyer</h1>
             <div className={"bflyer_container"}>
-                <div className={"settings_block"}>
-block 1
+            <div className={"game frame"}>Game</div>
+                <div className="settings_block">
+                    <div className="frame">
+                        <div>
+                            <label htmlFor="duration"></label>
+                            <select id="duration" name="duration">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="frame">
+                        <img src={BirdReach} alt="bird-reach"/>
+                        <button className="button-reach">Purchase</button>
+                    </div>
+                    <div className="frame">
+                        <img src={BirdNotReach} alt="bird-not-reach"/>
+                        <button className="button-not-reach">Purchase</button>
+                    </div>
+                    <div className="game_container frame">
                 </div>
-                <div className={"game_container"}>
-                    {/* <Ticks/> */}
+                    <Ticks/>
 block 2
                 </div>
             </div>
