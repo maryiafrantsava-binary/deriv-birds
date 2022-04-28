@@ -10,9 +10,8 @@ const Profile = () => {
         { title: '“Gamer”', description: 'Win BFlyer 10 times in a row', lock_avatar: '/images/achievements/gamer.svg', active_avatar: '/images/achievements/gamer_active.svg', limit: 3000  },
     ]
 
-    const activeAvatar = false;
-
-    const url = `https://deriv-birds.herokuapp.com/api/history/profiledata`;
+    const localData = JSON.parse(localStorage.userData)
+    const url = `https://deriv-birds.herokuapp.com/api/history/profiledata?id=${localData.userId}`;
     const [profileData, setprofileData] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
 
