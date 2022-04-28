@@ -35,7 +35,7 @@
         width: 15%;
         text-align: center;
       }
-      &-achievements {
+      &-achievement {
         width: 40%;
       }
     }
@@ -90,14 +90,14 @@
         }
         color: #a83838;
       }
-      &-achievements {
+      &-achievement {
         width: 40%;
       }
     }
   }
 }
 
-.achievements {
+.achievement {
   display: flex;
   align-items: end;
   &__item {

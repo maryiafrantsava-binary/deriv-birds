@@ -40,6 +40,7 @@ export const AuthPage = () => {
         try {
             const data = await request(`https://deriv-birds.herokuapp.com/api/auth/login`, 'POST', {...form})
             auth.login(data.token, data.userId);
+            localStorage.setItem("uerId",data.userId)
         } catch (e) {}
     }
     return (<div className="auth-wrapper">
