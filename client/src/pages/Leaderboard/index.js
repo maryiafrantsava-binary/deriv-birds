@@ -106,10 +106,10 @@ const Achievements = ({ score }) => {
       limit: 3000,
     }
   ]
-  return <div className="achievements">
+  return <div className="achievement">
     {achs.map((item, key) => {
       const src = score >= item.limit ? item.src_active : item.src;
-      return <div className="achievements__item" key={key}>
+      return <div className="achievement__item" key={key}>
         <img src={src} alt={item.label} />
       </div>
     })}
