@@ -18,7 +18,6 @@ export const Navbar = () => {
             <div style={{ padding: '0 2rem' }}>
                 <span><NavLink to="/home" className="brand-logo"><img src="/images/logo.svg"></img></NavLink></span>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><NavLink to="/game">Games</NavLink></li>
                     <li><NavLink to="/profile">Profile</NavLink></li>
                     {/* <li><NavLink to="/history">History</NavLink></li>
                     <li><NavLink to="/about_us">About us</NavLink></li> */}

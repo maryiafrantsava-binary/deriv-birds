@@ -17,13 +17,20 @@ a {
 
 select {
 	display: flex;
-	width: 108px;
-	height: 33px;
-	left: 65px;
-	top: 70px;
+	width: 10.8rem;
+	height: 3.3rem;
+	left: 6.5rem;
+	top: 7rem;
 	padding: 0.5rem;
 	background: #F0EEEE;
-	border-radius: 8px;
+	border-radius: 0.8rem;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+	&:focus {
+		outline: none !important;
+	}
 }
 
 nav {

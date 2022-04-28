@@ -34,6 +34,41 @@
 	border-radius: 2rem;
 	margin: 1rem;
 	padding: 1rem;
+
+  }
+  .settings_block_frame{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-width: 50rem;
+	background: #FFFFFF;
+	border-radius: 2rem;
+	margin: 1rem;
+	padding: 1rem;
+	padding: 6.5rem 7rem;
+
+	.frame_part1, .frame_part2, .frame_part3 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 2.7rem;
+	}
+	.duration_title_container, .duration_number_container, .duration_container, 
+	.barrier_container, .bird_coins_container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 1.5rem;
+		justify-self: start;
+	}
+
+	label {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		color: #000000;
+	}
   }
 	img {
 		width: 80px;
