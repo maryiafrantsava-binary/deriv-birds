@@ -3,6 +3,7 @@ import './BFlyerPage.scss'
 import Ticks from '../components/Ticks';
 import BirdReach from '../assets/images/bird_reach.svg'
 import BirdNotReach from '../assets/images/bird_not_reach.svg'
+import Game from '../assets/images/game.svg'
 
 export const BFlyerPage = () => {
 
@@ -70,7 +71,7 @@ React.useEffect(() => {
                 <h1>BFlyer</h1>
                 <h1 style={{color:"red", fontSize: "2rem"}}> We're sorry, but the game is still in development. You are testing stage of Alpha development.</h1>
                 <div className={"bflyer-common_container"}>
-                    <div className={"game frame"}>Game</div>
+                    <div className={"game-demo frame"}><img src={Game} alt="game"/></div>
 
                     <div className="settings_block">
                         <div className="settings_block_frame">
@@ -129,7 +130,7 @@ React.useEffect(() => {
                             <button className="button-reach">Purchase</button>
                         </div>
                         <div className="frame">
-                            <img src={BirdNotReach} alt="bird-not-reach"/>
+                            <img className="bird-not-reach" src={BirdNotReach} alt="bird-not-reach"/>
                             <button className="button-not-reach" onClick={()=> console.log('Purchase')}>Purchase</button>
                         </div>
                         {/* <div> */}
