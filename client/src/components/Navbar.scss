@@ -1,7 +1,9 @@
 .nav-wrapper {
     background: #F0EEEE;
     box-shadow: none;
-
+    .active{
+        background-color: grey;
+    }
     &-common {
         display: flex;
         justify-content: space-between;
