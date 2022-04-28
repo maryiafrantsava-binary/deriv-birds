@@ -5,14 +5,17 @@ import classNames from "classnames";
 const Leaderboard = () => {
   //const BASE_URL = process.env.BASE_URL;
   const url = `https://deriv-birds.herokuapp.com/api/history/getleaderboard`;
-  const [leaderBoard, setLeaderBoard] = React.useState([]);
+  const [leaderBoard, setLeaderBoard] = React.useState([{}]);
+  const [loading, setLoading] = React.useState(true);
 
   const fetchData = async () => {
     try {
       const response = await fetch(url);
       const json = await response.json();
       setLeaderBoard(json.message)
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.log("error", error);
     }
   };
@@ -20,7 +23,12 @@ const Leaderboard = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
+  if (loading) return (
+    <span>Loading</span>
+  );
+  if (!leaderBoard) return (
+    <span>Data not available</span>
+  );
   return (
     <section className="leaderboard">
       <div className="text-center"><h2>Leaderboard Page</h2></div>
@@ -38,7 +46,7 @@ const Leaderboard = () => {
             const is_active = false; // for future use...
             const name = item._id;
             const coins = item.score;
-            const skills = 70;
+            const skills = (item.score * 100 )/1000;
 
             console.log(item, 'item');
             return (
@@ -50,7 +58,7 @@ const Leaderboard = () => {
                 </div>
                 <div className="leaderboard__list-item-label"><p>{name}</p></div>
                 <div className="leaderboard__list-item-coins"><p>{coins}</p></div>
-                <div className="leaderboard__list-item-skills"><p>{skills}</p></div>
+                <div className="leaderboard__list-item-skills"><p>{skills}%</p></div>
                 <div className="leaderboard__list-item-achievements">
                   <Achievements score={item.score} />
                 </div>

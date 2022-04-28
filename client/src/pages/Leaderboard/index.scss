@@ -1,10 +1,15 @@
 .leaderboard {
+  background-image: url(../../assets/images/leaderboard-bg.svg);
+  background-size: cover;
+  height: 100vh;
+  min-width: 90vw;
   h2 {
     font-size: 4rem;
     font-weight: 500px;
     margin: 3rem 0;
   }
   &__list {
+    margin: 5%;
     &-header {
       padding: 1rem 3rem;
       div {
