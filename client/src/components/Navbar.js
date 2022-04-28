@@ -18,7 +18,7 @@ export const Navbar = () => {
     return (
         <nav className="nav-wrapper">
             <div style={{ padding: '0 2rem' }}>
-                <span><NavLink to="/home" className="brand-logo"><img src="/images/logo.svg"></img></NavLink></span>
+                <span><NavLink to="/home" className="brand-logo"><img src="/images/logo.svg" alt="logo"></img></NavLink></span>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     
                     {/* <li><NavLink to="/history">History</NavLink></li>
