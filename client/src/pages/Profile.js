@@ -35,6 +35,9 @@ const Profile = () => {
     if (loading) return (
         <span>Loading</span>
     );
+    if (profileData.length === 0){
+        return <span>No data found</span>
+    }
     return (
         <div className='profile'>
             <div className='container'>
