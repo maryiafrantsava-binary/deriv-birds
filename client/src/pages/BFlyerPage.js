@@ -60,30 +60,69 @@ React.useEffect(() => {
                 console.log("Difference " + (currentSpot - entrySpot) + "\n");
             }
         }
-    };
+    }
 }, []);
 
 
     return (
         <div className={"bflyer"}>
             <div className={"bflyer-common"}>
-                <h2>BFlyer</h2>
+                <h1>BFlyer</h1>
+                <h1 style={{color:"red", fontSize: "2rem"}}> We're sorry, but the game is still in development. You are testing stage of Alpha development.</h1>
                 <div className={"bflyer-common_container"}>
                     <div className={"game frame"}>Game</div>
 
                     <div className="settings_block">
-                        <div className="frame">
-                            <div>
-                                <label htmlFor="duration">Qwe: </label>
-                                <select 
-                                    id="duration" 
-                                    name="duration"
-                                    defaultValue={5}>
-                                    <option value="5">5</option>
-                                    <option value="10" disabled>10</option>
-                                    <option value="15" disabled>15</option>
-                                </select>
+                        <div className="settings_block_frame">
+                            <div className="frame_part1">
+
+                                <div className="duration_title_container">
+                                    <label htmlFor="duration_number">Duration: </label>
+                                </div>
+
+                                <div className="duration_number_container">
+                                    <select 
+                                        id="duration_number" 
+                                        name="duration_number"
+                                        defaultValue={5}>
+                                        <option value="5">5</option>
+                                        <option value="10" disabled>10</option>
+                                        <option value="15" disabled>15</option>
+                                    </select>
+                                </div>
+
+                                <div className="duration_container">
+                                    <select 
+                                        id="duration" 
+                                        name="duration"
+                                        defaultValue={"ticks"}>
+                                        <option value="ticks">ticks</option>
+                                        <option value="seconds" disabled>seconds</option>
+                                    </select>
+                                </div>
+
                             </div>
+
+                            <div className="frame_part2">
+
+                                <div className="barrier_container">
+                                    <label htmlFor="duration_number">Barrier: </label>
+                                    <input type="text" id="barrier" name="barrier" placeholder="1.000"/>
+                                    <span>from 1.000 till 5.000</span>
+                                </div>
+
+                            </div>
+
+                            <div className="frame_part3">
+
+                                <div className="bird_coins_container">
+                                    <label htmlFor="bird_coins">BirdCoins: </label>
+                                    <input type="text" id="bird_coins" name="bird_coins" placeholder="100"/>
+                                    <span>from 10 till 300</span>
+                                </div>
+
+                            </div>
+
                         </div>
                         <div className="frame">
                             <img src={BirdReach} alt="bird-reach"/>
@@ -91,14 +130,11 @@ React.useEffect(() => {
                         </div>
                         <div className="frame">
                             <img src={BirdNotReach} alt="bird-not-reach"/>
-                            <button className="button-not-reach">Purchase</button>
+                            <button className="button-not-reach" onClick={()=> console.log('Purchase')}>Purchase</button>
                         </div>
-                        <div className="game_container frame"></div>
-                        <div>
+                        {/* <div> */}
                             {/* <Ticks/> */} 
-                            block 2
-                        </div>
-
+                        {/* </div> */}
                     </div>
 
                 </div>
